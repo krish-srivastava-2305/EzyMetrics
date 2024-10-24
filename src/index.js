@@ -1,7 +1,8 @@
-import { app } from "./app";
-import connectDB from "./config/db";
+import { app } from "./app.js";
+import connectDB from "./config/db.js";
 import dotenv from "dotenv";
-import { mailer } from "./config/nodemailer.cofig";
+import { mailer } from "./config/nodemailer.cofig.js";
+import { emailService } from "./services/email.services.js";
 
 dotenv.config({
   path: "./env",
@@ -14,7 +15,7 @@ let transporter;
 const start = async () => {
   try {
     await connectDB();
-    transporter = await mailer();
+    emailService.verifyConnection();
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });

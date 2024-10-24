@@ -1,6 +1,7 @@
 import { Campaign } from "../models/campaign.model";
 import { dummyCampaigns } from "../dummyData/campaigns.dummy";
 import { campaignTransform } from "../services/etl.services";
+import { emailService } from "../services/email.services";
 
 // this controller function fetches all campaigns from the database or dummy data
 export const fetchCampaigns = async (req, res) => {
