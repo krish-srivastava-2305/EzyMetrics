@@ -1,3 +1,4 @@
+// here we initialize a class with dummy data and a method to get the data and export an object/instance of this class
 class Leads {
   static leads = [
     {
@@ -39,4 +40,4 @@ class Leads {
   }
 }
 
-export default new Leads();
+export const dummyLeads = new Leads();

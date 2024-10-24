@@ -29,3 +29,5 @@ const campaignSchema = new Schema(
     timestamps: true,
   }
 );
+
+export const Campaign = mongoose.model("Campaign", campaignSchema);

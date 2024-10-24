@@ -1,3 +1,4 @@
+// class containing dummy data for campaigns and a method to get the data and exporting an object/instance of this class
 class Campaign {
   static Campaign = [
     {
@@ -63,4 +64,4 @@ class Campaign {
   }
 }
 
-export default new Campaign();
+export const dummyCampaigns = new Campaign();
